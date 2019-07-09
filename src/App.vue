@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="main"></div>
-    <span class="vc-text--clamp">
+    <span class="vc-text">
       {{ $store.state.basis.name }}
     </span>
     <button @click="change">change</button>
@@ -9,12 +9,11 @@
   </div>
 </template>
 
+
 <script>
 export default {
   name: "App",
-  mounted() {
-    console.log(this.config);
-  },
+  mounted() {},
   methods: {
     change() {
       this.$store.commit("change/name", "huang");
@@ -25,9 +24,6 @@ export default {
 
 <style>
 </style>
-<style lang="less">
-//less 文件不能像css在main.js中直接引入，需要在次处引入即可
-@import "./css/basis/index.less";
-</style>
+
 
 
